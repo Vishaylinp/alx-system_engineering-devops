@@ -8,3 +8,4 @@ Task 6 Create a script that creates a directory named my first directory in the 
 Task 7 Move the file betty from tmp to tmp my first directory
 Task 8 Delete the file betty
 Task 9 Delete the directory my first directory that is in the tmp directory
+Task 10 Write a script that changes the working directory to the previous one
