@@ -5,3 +5,4 @@ Task 3 Display current directory contents in a long format
 Task 4 Display current directory contents, including hidden files
 Task 5 Display current directory contents long format , hidden and numerical
 Task 6 Create a script that creates a directory named my first directory in the tmp directory
+Task 7 Move the file betty from tmp to tmp my first directory
