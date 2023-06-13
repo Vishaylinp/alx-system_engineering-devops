@@ -17,3 +17,8 @@ Count that word
 What's next?
  I hate bins
 Letters only please
+A to Z
+Without C, you would live in hiago
+ esreveR
+DJ Cut Killer
+
