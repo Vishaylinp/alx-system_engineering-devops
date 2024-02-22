@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times using a while loop.
+
+my_string="Best School"
+num=0
+while [ $num -lt 10 ]; do
+	echo "$my_string"
+	num=$((num + 1))
+done
