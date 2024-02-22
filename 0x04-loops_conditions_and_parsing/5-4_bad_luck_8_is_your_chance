@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#Bash script that loops from 1 to 10 and print good luck and bad luck
+
+my_string="Best School"
+num=0;
+
+while [ $num -lt 10 ]; do
+	if [[ $num == 3 ]]
+then
+		echo "bad luck"
+
+	elif [[ $num == 7 ]]
+then
+	echo "good luck"
+
+else
+	echo "$my_string"
+	fi
+	(( num++ ))
+done	
