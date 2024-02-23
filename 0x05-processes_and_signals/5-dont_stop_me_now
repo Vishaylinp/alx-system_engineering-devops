@@ -1,4 +1,4 @@
-#!/usr/bin/envo bash
+#!/usr/bin/env bash
 # Kill infinite loop
 
 kill "$(pgrep -f 4-to_infinity_and_beyond)"
