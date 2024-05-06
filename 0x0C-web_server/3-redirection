@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Redirection of page
+
+sudo apt-get update
+sudo apt-get -y  install nginx
+
+echo "Hello World" > /var/www/html/index.html
+replace_string="server_name _;\n\trewrite ^\/redirect_me http:/\/\google.com permanent;"
+sudo sed -i "s/server_name -;/$replace_string/" /etc/nginx/sites-enabled/default
+sudo nginx -t
+sudo service nginx start
+
