@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# 404 page
+
+sudo apt-get update
+sudo apt-get -y install nginx
+
+echo "Hello World!" | sudo tee /var/www/html/index.html
+replace_string="server_name _;\n\trewrite ^\/redirect_me https:\/\/google.com permanent;"
+sudo sed -i "s/server_name _;/$replace_string/" /etc/nginx/sites-enabled/default
+
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+replace_string="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation =
+\/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
+sudo sed -i "s/listen 80 default_server;/$replace_string/" /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
