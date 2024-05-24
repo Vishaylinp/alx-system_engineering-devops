@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Backup
+
+day=$(date +"%d")
+month=$(date +"%m")
+year=$(date +"%Y")
+name_of_file="$day-$month-$year.tar.gz"
+
+mysqldump --defaults-extra-file=~/.my.cnf --all-databases > backup.sql
+tar -czvf "$file_name" backup.sql
