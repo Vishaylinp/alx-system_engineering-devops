@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     response = requests.get(url)
 
-    worker_name = response.json().get('name')
+    w_name = response.json().get('name')
 
     url_todo = url + "/todos"
     response = requests.get(url_todo)
@@ -25,7 +25,7 @@ if __name__ == "__main__":
             complete_t.append(task)
             i = i + 1
 
-    print(f"Employee {worker_name} is done with tasks ({i}/{len(to_do_list)}):")
+    print(f"Employee {w_name} is done with tasks({i}/{len(to_do_list)}):")
 
     for task in complete_t:
         print("\t {}".format(task.get('title')))
