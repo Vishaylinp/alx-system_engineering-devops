@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Returns employees TO DO list
+"""Returns employees TO DO list"""
 
 import requests
 import sys
