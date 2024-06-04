@@ -10,12 +10,10 @@ def recurse(subreddit, hot_list=[], after="", count=0):
     AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 \
     Safari/537.36 Edg/125.0.0.0"}
     params = {"after": after, "count": count, "limit": 100}
-    
     response = requests.get(url, headers=headers, params=params,
                             allowed_redirections=False)
     if response.status_code == 404:
         return None
-    
     results = response.json().get("data")
     after = results.get("after")
     count = count + results.get("distribute")
