@@ -6,6 +6,7 @@ exec {'replacement':
   before   => Exec['restart'],
 }
 
-exec {'restarting':
-  provider  => 'sudo service nginx restart',
+exec {'restart':
+  provider => shell,
+  command  => 'sudo service nginx restart',
 }
